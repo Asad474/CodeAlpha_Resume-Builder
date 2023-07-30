@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="home-content">
+        <div class="header-content">
+            <h2>Resume Builder</h2>
+            <h4>Create a Professional Resume in Minutes</h4>
+        </div>
+
+        <div class="body-content">
+            <div class="image-section">
+                <img src="{% static 'images/resume-logo.jpg' %}" alt="">
+            </div>
+
+            <p>
+                Our Resume Builder App is a user-friendly tool designed to assist individuals in creating professional and impactful resumes. Whether you're a recent graduate entering the job market or an experienced professional looking to advance your career, our app will guide you through the resume-building process, ensuring that you highlight your skills, experience, and achievements effectively.
+            </p>
+
+            <a href="{% url 'resume-form' %}" class="btn">Create Resume</a>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+nav{
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+    background-color: #FEFCFF;
+    height: 30px;
+    box-shadow: 0 2px 2px #ccc;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: blue;
+    font-size: 28px;
+}
+
+nav .left-content a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+}
+
+nav .left-content a img{
+    height: 40px;
+    width: 40px;
+}
+
+nav .middle-content ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+nav .middle-content ul li{
+    list-style: none;
+}
+
+nav .middle-content ul li a{
+    font-size: 18px;
+}
+
+/* Home Page */
+.home-content{
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+}
+
+.home-content .header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-content .header-content h2{
+    font-size: 2.4em;
+}
+
+.home-content .header-content h4{
+    font-size: 1.4em;
+}
+
+.home-content .body-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-content .body-content p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px;
+}
+
+.home-content .body-content a{
+    text-decoration: none;
+    background-color: #007BFF;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 10px;
+    color: #FDFEFE;
+    cursor: pointer;
+}
+
+/* Resume Form Page */
+.resumeform-section{
+    margin: 40px auto;
+    width: 70%;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.resumeform-section form .cv-form-title{
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 30px;
+    background-color: #009688;
+    color: #FFF;
+    text-align: center;
+}
+
+.cv-form-row{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    margin-left: 20px;
+}
+
+.cv-form-row .cv-form-col{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.cv-form-row .cv-form-col .form-elem{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.cv-form-row .cv-form-col .form-pic{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.cv-form-row .cv-form-col .form-elem input{
+    width: 400px;
+    padding-left: 3px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+.cv-form-row .cv-form-col .form-elem textarea{
+    width: 380px;
+    height: 200px;
+    padding: 10px;   
+    padding-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.cv-form-row .cv-form-col .remove-button{
+    border: none;
+    background-color:white;
+    width: 20%;
+    height: 30px;
+    color: red;
+    margin-top: 50px;
+    cursor: pointer;
+    outline: none;
+}
+
+.cv-form-row .add-button{
+    border: none;
+    color: #007BFF;
+    background: inherit;
+    cursor: pointer;
+    text-align: start;
+    outline: none;
+}
+
+.cv-form-row-education, .cv-form-row-experience, .cv-form-row-skills, .cv-form-row-project{
+    gap: 90px;
+}
+
+.cv-form-row-education .cv-form-col-education .form-elem input{
+    width: 380px;
+}
+
+.cv-form-row-experience .cv-form-col-experience input,
+.cv-form-row-project .cv-form-col-project input{
+    width: 450px;
+}
+
+.cv-form-row-skills .cv-form-col-skill{
+    justify-content: space-between;
+}
+
+.cv-form-row-skills .cv-form-col-skill .form-elem input{
+    width: 500px;
+}
+
+.cv-form-row-skills .cv-form-col-skill .form-elem textarea{
+    width: 700px;
+}
+
+.cv-form-row .cv-form-col .remove-skill{
+    margin-top: 30px;
+}
+
+/* .cv-form-row-experience .cv-form-col-experience,
+.cv-form-row-project .cv-form-col-project{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+} */
+
+/* .cv-form-row-experience .cv-form-col-experience .form-elem input,
+.cv-form-row-project .cv-form-col-project .form-elem input{
+   width: 700px; 
+} */
+
+.cv-form-row-experience .cv-form-col-experience .form-elem textarea,
+.cv-form-row-project .cv-form-col-project .form-elem textarea{
+    width: 700px; 
+}
+
+.cv-form-row-experience .cv-form-col-experience .remove-experience,
+.cv-form-row-project .cv-form-col-project .remove-project{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+}
+
+.cv-form-col-formsets{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resumeform-section form .print-cv,
+.navigation-btns{
+    display: flex;
+    gap: 50px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.navigation-btns{
+    width: 50%;
+}
+
+.resumeform-section form .print-cv .submit-btn,
+.navigation-btns .prev-btn, 
+.navigation-btns .next-btn{
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.resumeform-section form .print-cv .submit-btn{
+    margin-top: 30px;
+    width: 90%;
+}
+
+/* Resume Section */
+.resume-container{
+    position: relative;
+    width: 100%;
+    min-width: 100px;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 50px auto;
+    box-shadow: 0 35px 55px #0000001A;
+}
+
+.resume-container .left-side{
+    position: relative;
+    padding: 40px;
+    background-color: #003147;
+}
+
+.resume-container .left-side .profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF33;
+}
+
+.resume-container .left-side .profile .myimg{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.resume-container .left-side .profile .myimg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-container .left-side .profile h2{
+    color: #FFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.resume-container .left-side .profile h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.resume-container .left-side .contacts{
+    padding-top: 40px;
+}
+
+.resume-container .left-side .contacts .title{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.resume-container .left-side .contacts ul{
+    position: relative
+}
+
+.resume-container .left-side .contacts ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.resume-container .left-side .contacts ul li .icon{
+    display: inline-block;
+    width: 30px;
+    color: #03A9F4;
+}
+
+.resume-container .left-side .contacts ul li span{
+    color: #FFF;
+    font-size: 14px;
+}
+
+.resume-container .left-side .contacts ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.resume-container .left-side .contacts ul li a:hover{
+    color: #007BFF;
+}
+
+.resume-container .left-side .contacts.education li{
+    margin-bottom: 15px;
+}
+
+.resume-container .left-side .contacts.education h5{
+    font-size: 14px;
+    font-weight: 500;
+    color: #007BFF;
+}
+
+.resume-container .left-side .contacts.education h4{
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.resume-container .left-side .contacts.education h4:nth-child(2){
+    font-weight: 300;
+}
+
+.resume-container .right-side{
+    position: relative;
+    padding: 40px;
+    background-color: #FEFCFF;
+}
+
+.resume-container .right-side .about{
+    margin-bottom: 50px;
+}
+
+.resume-container .right-side .about h2{
+    text-transform: uppercase;
+    color: #003147;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.resume-container .right-side .about p{
+    font-size: 16px;
+    color: #333;
+}
+
+.resume-container .right-side .about.experience .box{
+    margin-bottom: 30px;
+}
+
+.resume-container .right-side .about.experience .box h5{
+    font-size: 16px;
+}
+
+.resume-container .right-side .about.experience .box h4{
+    font-size: 20px;
+}
+
+.resume-container .right-side .about.experience .box p{
+    font-size: 14px;
+    color: #003147;
+}
+
+.resume-container .right-side .about.skills .skill-list{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.resume-container .right-side .about.skills .skill-list li{
+    font-size: 18px;
+}
+
+.resume-container .right-side .about.projects .project{
+    margin-bottom: 22px;
+}
+
+.resume-container .right-side .about.projects .project h2{
+    font-size: 20px;
+}
+
+.resume-container .right-side .about.projects .project .link a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.resume-container .right-side .about.projects .project .link a:hover{
+    font-size: 16px;
+    color: red;
+}
+
+/* Login Section */
+.login-container{
+    width: 28%;
+    height: 400px;
+    margin: 60px auto;   
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #F7F9F9;
+}
+
+.login-container h2{
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.login-container form input{
+    height: 35px;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    padding-left: 10px;
+    background: #FBFCFC;
+}
+
+.login-container p{
+    font-size: 16px;
+    margin: 40px auto;
+    width: 70%;
+}
+
+.login-container p a{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.login-container p a:hover{
+    font-size: 16px;
+}
+
+.login-container button[type="submit"]{
+    cursor: pointer;
+    width: 90%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.login-container button[type="submit"]:hover{
+    background: #43A047;
+}    
+
+.login-container p a:hover{
+    font-size: 20px;
+    color: #5DADE2;
+}
+
+/* Register */
+.register-container{
+    height: 500px;
+    width: 30%;
+}
+
+.register-container p{
+    margin: 20px auto;
+}

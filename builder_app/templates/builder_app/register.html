@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <section class="login-container register-container">
+        <h2>Sign up</h2>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-grp">            
+                {{ form.username }}
+            </div>
+
+            <div class="form-grp">            
+                {{ form.email }}
+            </div>
+
+            <div class="form-grp">            
+                {{ form.password1 }}
+            </div>
+
+            <div class="form-grp">            
+                {{ form.password2 }}
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already Registered? <a href="{% url 'loginuser' %}">Sign in</a></p>
+    </section>  
+{% endblock %}

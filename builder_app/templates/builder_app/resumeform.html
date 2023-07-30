@@ -1,0 +1,241 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <section class="resumeform-section">
+        <form action="" id="resume-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="about-content resume-form-details">
+                <h2 class="cv-form-title">Personal Details</h2>
+                <div class="cv-form-row cv-form-row-about">
+                    <div class="cv-form-col">
+                        <div class="form-elem">
+                            <label for="first_name">First Name</label>
+                            {{ userprofile_form.first_name }}
+                        </div>
+
+                        <div class="form-elem">
+                            <label for="last_name">Last Name</label>
+                            {{ userprofile_form.last_name }}
+                        </div>                                                    
+                    </div>
+
+                    <div class="cv-form-col">
+                        <div class="form-pic">
+                            <label for="profile-pic">Profile Pic</label>
+                            {{ userprofile_form.profile_pic }}
+                        </div>
+                    </div>
+
+                    <div class="cv-form-col">
+                        <div class="form-elem">
+                            <label for="designation">Designation</label>
+                            {{ userprofile_form.designation }}
+                        </div>
+
+                        <div class="form-elem">
+                            <label for="career_objective">Career Objective</label>
+                            {{ userprofile_form.career_objective }}
+                        </div>
+                    </div>
+                    
+                    <div class="cv-form-col">
+                        <div class="form-elem">
+                            <label for="address">Address</label>
+                            {{ userprofile_form.address }}
+                        </div>
+
+                        <div class="form-elem">
+                            <label for="phone">Phone No</label>
+                            {{ userprofile_form.phone }}
+                        </div>
+                    </div>
+
+                    <div class="cv-form-col">    
+                        <div class="form-elem">
+                            <label for="linkedin">Linkedin</label>
+                            {{ userprofile_form.linkedin }}
+                        </div>
+
+                        <div class="form-elem">
+                            <label for="github">Github</label>
+                            {{ userprofile_form.github }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-btns">
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="education-content resume-form-details">
+                <h2 class="cv-form-title">Education Details</h2>
+
+                {{ education_formset.management_form }}
+                <div class="cv-form-row cv-form-row-education">
+                    {% for education_form in education_formset %}
+                    <div class="cv-form-col-formsets education-template">
+                        <div class="cv-form-col cv-form-col-education">
+                            <span style="display: none;">{{ education_form.id }}</span>
+
+                            <div class="form-elem">
+                                <label for="start_year">Start year</label>
+                                {{ education_form.start_year }}
+                            </div>
+    
+                            <div class="form-elem">
+                                <label for="end_year">End year</label>
+                                {{ education_form.end_year }}
+                            </div>
+                        </div>
+
+                        <div class="cv-form-col cv-form-col-education">
+                            <div class="form-elem">
+                                <label for="education">Education</label>
+                                {{ education_form.education }}
+                            </div>
+    
+                            <div class="form-elem">
+                                <label for="institute">Institute</label>
+                                {{ education_form.institute }}
+                            </div>
+                        </div>
+                
+                        <!-- <button class="remove-education remove-button" type="button" style="display: none;"><i class="fa fa-sharp fa-solid fa-trash"></i> Delete</button> -->
+                    </div>
+
+                    {% endfor %}
+                    <button class="add-education add-button" type="button">+ Add Education</button>
+                </div>
+
+                <div class="navigation-btns">
+                    <button class="prev-btn">Prev</button>
+                    <button class="next-btn">Next</button>                
+                </div>
+            </div>
+
+            <div class="skills-content resume-form-details">
+                <h2 class="cv-form-title">Skills Details</h2>
+                {{ skill_formset.management_form }}
+                <div class="cv-form-row cv-form-row-skills">        
+                    {% for skill_form in skill_formset %}
+                    <div class="cv-form-col-formsets skill-template">
+                        <div class="cv-form-col cv-form-col-skill">
+                            <span style="display: none;">{{ skill_form.id }}</span>
+
+                            <div class="form-elem">
+                                <label for="skill">Skill</label>
+                                {{ skill_form.skill }}
+                            </div>
+                            <!-- <button class="remove-skill remove-button" type="button" style="display: none;"><i class="fa fa-sharp fa-solid fa-trash"></i> Delete</button> -->
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <button class="add-skill add-button" type="button">+ Add Skill</button>
+                </div>
+                <div class="navigation-btns">
+                    <button class="prev-btn">Prev</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="experience-content resume-form-details">
+                <h2 class="cv-form-title">Experience Details</h2>
+                {{ experience_formset.management_form }}
+                <div class="cv-form-row cv-form-row-experience">
+                    {% for experience_form in experience_formset %}
+                    <div class="cv-form-col-formsets experience-template">
+                        <div class="cv-form-col cv-form-col-experience">
+                            <span style="display: none;">{{ experience_form.id }}</span>
+                            <div class="form-elem">
+                                <label for="start_date">Start Date</label>
+                                {{ experience_form.start_date }}
+                            </div>
+    
+                            <div class="form-elem">
+                                <label for="end_date">End Date</label>
+                                {{ experience_form.end_date }}
+                            </div>
+                        </div>    
+
+                        <div class="cv-form-col cv-form-col-experience">
+                            <div class="form-elem">
+                                <label for="position">Position</label>
+                                {{ experience_form.position }}
+                            </div>
+    
+                            <div class="form-elem">
+                                <label for="company">Company</label>
+                                {{ experience_form.company }}
+                            </div>
+                        </div>
+
+                        <div class="cv-form-col cv-form-col-experience">
+                            <div class="form-elem">
+                                <label for="description">Description</label>
+                                {{ experience_form.description }}
+                            </div>
+                        </div>
+                        <!-- <button class="remove-experience remove-button" type="button" style="display: none;"><i class="fa fa-sharp fa-solid fa-trash"></i> Delete</button>     -->
+                    </div>
+
+                    {% endfor %}
+                    <button class="add-experience add-button" type="button">+ Add Experience</button>
+                </div>
+
+                <div class="navigation-btns">
+                    <button class="prev-btn">Prev</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="project-content resume-form-details">
+                <h2 class="cv-form-title">Project Details</h2>
+                {{ project_formset.management_form }}
+                <div class="cv-form-row cv-form-row-project">
+                    {% for project_form in project_formset %}
+                    <div class="cv-form-col-formsets project-template">
+                        <div class="cv-form-col cv-form-col-project">
+                            <span style="display: none;">{{ project_form.id }}</span>
+                            <div class="form-elem">
+                                <label for="title">Title</label>
+                                {{ project_form.title }}
+                            </div>
+                        </div>    
+
+                        <div class="cv-form-col cv-form-col-project">
+                            <div class="form-elem">
+                                <label for="description">Desciption</label>
+                                {{ project_form.description }}
+                            </div>
+                        </div>                        
+
+                        <div class="cv-form-col cv-form-col-project">
+                            <div class="form-elem">
+                                <label for="link1">Link1(optional)</label>
+                                {{ project_form.link1 }}
+                            </div>
+    
+                            <div class="form-elem">
+                                <label for="link2">Link2(optional)</label>
+                                {{ project_form.link2 }}
+                            </div>
+                        </div>
+                        <!-- <button class="remove-project remove-button" type="button" style="display: none;"><i class="fa fa-sharp fa-solid fa-trash"></i> Delete</button> -->
+                    </div>
+                    {% endfor %}
+                    <button class="add-project add-button" type="button">+ Add Project</button>
+                </div>    
+
+                <div class="navigation-btns">
+                    <button class="prev-btn">Prev</button>
+                </div>
+            </div>
+
+            <div class="print-cv">
+                <button type="submit" class="submit-btn">Print CV</button>
+            </div>
+        </form>
+    </section>
+{% endblock %}
